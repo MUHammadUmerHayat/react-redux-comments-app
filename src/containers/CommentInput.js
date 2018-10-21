@@ -1,6 +1,7 @@
 /*
 对于 CommentInput 组件，我们可以看到它有三个参数：username、onSubmit、onUserNameInputBlur。
-我们需要一个 Smart 的组件来管理用户名在 LocalStorage 的加载、保存；用户还可能点击“发布”按钮，所以还需要处理评论发布的逻辑。
+我们需要一个 Smart 的组件来管理用户名在 LocalStorage 的加载、保存；
+用户还可能点击“发布”按钮，所以还需要处理评论发布的逻辑。
 */
 
 import React, { Component } from 'react'

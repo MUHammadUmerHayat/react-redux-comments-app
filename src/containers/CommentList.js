@@ -85,10 +85,14 @@ export default connect(
 )(CommentListContainer)
 
 /*
-我们一开始传给 CommentListContainer 的 props.comments 其实是 reducer 里面初始化的空的 comments 数组，因为还没有从 LocalStorage 里面取数据。
+我们一开始传给 CommentListContainer 的 props.comments 
+其实是 reducer 里面初始化的空的 comments 数组，因为还没有从 LocalStorage 里面取数据。
 
-而 CommentListContainer 内部从 LocalStorage 加载 comments 数据，然后调用 this.props.initComments(comments) 会导致 dispatch，从而使得真正从 LocalStorage 加载的 comments 初始化到 state 里面去。
+而 CommentListContainer 内部从 LocalStorage 加载 comments 数据，
+然后调用 this.props.initComments(comments) 会
+导致 dispatch，从而使得真正从 LocalStorage 加载的 comments 初始化到 state 里面去。
 
-因为 dispatch 了导致 connect 里面的 Connect 包装组件去 state 里面取最新的 comments 然后重新渲染，这时候 CommentListContainer 才获得了有数据的 props.comments。
+因为 dispatch 了导致 connect 里面的 Connect 包装组件去 state 里面取最新的 comments 
+然后重新渲染，这时候 CommentListContainer 才获得了有数据的 props.comments。
 
 */
