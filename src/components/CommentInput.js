@@ -23,7 +23,7 @@ export default class CommentInput extends Component {
   componentDidMount () {
     this.textarea.focus()
   }
-
+  // 这个方法会在用户名输入框 blur 的时候的被调用，保存用户名
   handleUsernameBlur (event) {
     if (this.props.onUserNameInputBlur) {
       this.props.onUserNameInputBlur(event.target.value)

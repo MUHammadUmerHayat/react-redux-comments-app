@@ -12,15 +12,15 @@ import { addComment } from '../reducers/comments'
 
 // CommentInputContainer
 // 负责用户名的加载、保存，评论的发布
-
+// 这个组件拥有自己的state
 class CommentInputContainer extends Component {
   static propTypes = {
     comments: PropTypes.array,
     onSubmit: PropTypes.func
   }
 
-  constructor () {
-    super()
+  constructor (props) {
+    super(props)
     this.state = { username: '' }
   }
 
